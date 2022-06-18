@@ -6,13 +6,13 @@ namespace Singleton
     class Logger
     {
         private static Logger instance;
-        private static string filepath;
+        private string filepath;
         private Logger()
         {
-            Filepath = "log.txt";
+            this.filepath = "log.txt";
         }
 
-        public static string Filepath { get { return filepath; } set { filepath = value; } }
+        public string Filepath { get { return filepath; } set { filepath = value; } }
 
         public static Logger GetInstance()
         {
